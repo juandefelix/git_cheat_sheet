@@ -47,10 +47,11 @@
       <h2 id="linking">Linking you local repository to GitHub</h2>
       <p>If you want to link your local repository to a remote repo, first you have to create your remote repository in GitHub. Then you can type in your terminal:<br><br>
       <code>$ git remote add origin http://github.com/username/repository_name</code><br><br>
+      Now you local and remote repositories are linked.<br><br>
       </p>
 
       <h2 id="add">Adding files to the staging area</h2>
-      <p>If you want to Git to keep track of a file, you need to add it to the staging area. To accomplish that, type:<br><br>
+      <p>If you want to Git to keep track of a file, first you need to add it to the staging area. To accomplish this, type:<br><br>
       <code>$ git add filename</code><br><br>
       Also you can add all the files in your folder typing:<br><br>
       <code>$ git add .</code><br><br>
@@ -59,7 +60,7 @@
       <h2 id="commit">Commit to a repository</h2>
       <p>A commit is like a snapshop of the files you have in the staging area in a particular moment. In order to commit to your local repository type:<br><br>
       <code>$ git commit -m "Message"</code><br><br>
-      Remember you have to add the files to the staging area everytime you want to do a commit. There's an option to commit adding all the files to the staging area.<br><br>
+      Remember you have to add first the files to the staging area everytime you want to commit. There's an option to commit adding all the files to the staging area.<br><br>
       <code>$ git commit -a -m "Message"</code><br><br>
       </p>
 
@@ -72,7 +73,7 @@
       <p>Anytime you can check the status and git log.<br><br>
       <code>$ git status</code><br><br>
       The status will tell you in which branch are you in and if there's any change to commit.<br>
-      The git log command will display all the commits for your repository in the current branch you are.
+      The git log command will display all the commits for your repository and the current branch you are.
       <br><br>
       <code>$ git log</code><br><br>
       You'll see a list of all the commits you've made and a number. The number will be useful to do future checkouts.
@@ -81,11 +82,12 @@
       <h2 id="checkout">Go back in time</h2>
       <p>You can check the status of you code in a previous state (a previous commit) with the checkout command.<br><br>
       <code>$ git chechout 234ebc2345</code><br><br>
-      If you look at your files, the will look like they were in the moments you committed to you repo.<br>
-      if you wan to go back to the last state type:
+      If you look at your files, the will look like they were in the moment you committed to you repository.<br>
+      If you wan to go back to the last commit:
       <br><br>
       <code>$ git checkout master</code><br><br>
       </p>
+      <hr>
     </div>
   </div>
 </body>
