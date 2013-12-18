@@ -1,3 +1,7 @@
+body{
+  /*background-color: red;*/
+}
+
 h1{
   color:#6C6C6C;
   font-family: Georgia, "Times New Roman", serif; 
@@ -15,8 +19,11 @@ p{
   line-height: 24px;
 }
 
-body{
-  /*background-color: red;*/
+a, a:visited{
+  color: #252525;
+  font-size: 16px;
+
+  text-decoration: none;
 }
 
 code{
@@ -24,4 +31,15 @@ code{
   font-size: 13px;
   color: #ffdead;
   padding: 3px 6px;
+}
+
+.side-menu{
+  /*outline: 1px solid;*/
+  border: 1px solid #aaa;
+  border-radius: 5px;
+  background-color: #eee;
+}
+
+.side-menu ul{
+  list-style-type: none;
 }
