@@ -3,84 +3,90 @@
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
   <title>Git Cheat Sheet</title>
+  <link rel="stylesheet" href="normalize.css" type="text/css" media="screen">
+  <link rel="stylesheet" href="grid.css" type="text/css" media="screen">
   <link rel="stylesheet" href="style.css" type="text/css" media="screen">
 </head>
+
 <body>
-  <h1>Git Cheat Sheet</h1>
-  <p>Here we have an overview of the most popular functions in Git.<br>
-  <!-- We'll cover the following frequent tasks -->
-  </p>
-  <div class="side-menu">
-    <ul>
-      <li><a href="#installing">Installing Git</a></li>
-      <li><a href="#creating">Creating a repository</a></li>
-      <li><a href="#linking">Linking you local repository to GitHub</a></li>
-      <li><a href="#add">Adding files to the staging area</a></li>
-      <li><a href="#commit">Commit to a repository</a></li>
-      <li><a href="#commit-remote">Commit to a remote repository</a></li>
-      <li><a href="#status">Status and log</a></li>
-      <li><a href="#checkout">Go back in time</a></li>
-      <li>Branching (Coming Soon)</a></li>
-      <li>Merging (Coming Soon)</a></li>
-    </ul>
+  <div class="container clearfix">
+    <div id="header" class="grid 12">
+      <h1>Git Cheat Sheet</h1>
+      <p>Here we have an overview of the most popular functions in Git.</p><br>
+    </div> <!-- end header -->
+        
+    <div id="side-menu" class="grid_4"><!-- style="width:300px;float:left;" -->
+      <p class="menu">Menu (click in the items)</p>
+      <ul>
+        <li><a href="#installing">Installing Git</a></li>
+        <li><a href="#creating">Creating a repository</a></li>
+        <li><a href="#linking">Linking you local repository to GitHub</a></li>
+        <li><a href="#add">Adding files to the staging area</a></li>
+        <li><a href="#commit">Commit to a repository</a></li>
+        <li><a href="#commit-remote">Commit to a remote repository</a></li>
+        <li><a href="#status">Status and log</a></li>
+        <li><a href="#checkout">Go back in time</a></li>
+        <li>Branching (Coming Soon)</a></li>
+        <li>Merging (Coming Soon)</a></li>
+      </ul>
+    </div> <!-- end side-menu -->
+
+    <div id="content" class="grid_7 omega"><!-- style="width:1100px; float: left" -->
+      <h2 id="installing">Installing Git</h2>
+      <p>To install Git, type in your terminal:<br><br>
+      <code>$ sudo apt-get install git</code><br><br>
+      You can check if git is installed typing:<br><br>
+      <code>$ git --version</code><br><br>
+      </p>
+      <h2 id="creating">Creating a Repository</h2>
+      <p>If you want to create a repository of a project, place all the files if the project in the same folder. In you console, make this file your working directory. Once you are in that directory type:<br><br>
+      <code>$ git init</code><br><br>
+      You'll see a message saying that a repository was created in your folder.
+      </p><br>
+
+      <h2 id="linking">Linking you local repository to GitHub</h2>
+      <p>If you want to link your local repository to a remote repo, first you have to create your remote repository in GitHub. Then you can type in your terminal:<br><br>
+      <code>$ git remote add origin http://github.com/username/repository_name</code><br><br>
+      </p>
+
+      <h2 id="add">Adding files to the staging area</h2>
+      <p>If you want to Git to keep track of a file, you need to add it to the staging area. To accomplish that, type:<br><br>
+      <code>$ git add filename</code><br><br>
+      Also you can add all the files in your folder typing:<br><br>
+      <code>$ git add .</code><br><br>
+      </p>
+
+      <h2 id="commit">Commit to a repository</h2>
+      <p>A commit is like a snapshop of the files you have in the staging area in a particular moment. In order to commit to your local repository type:<br><br>
+      <code>$ git commit -m "Message"</code><br><br>
+      Remember you have to add the files to the staging area everytime you want to do a commit. There's an option to commit adding all the files to the staging area.<br><br>
+      <code>$ git commit -a -m "Message"</code><br><br>
+      </p>
+
+      <h2 id="commit-remote">Commit to a remote repository</h2><br>
+      <code>$ git push origin master</code><br><br>
+      <p>Your last commit will be added to the remote repository.<br><br>
+      </p>
+
+      <h2 id="status">Status and log</h2>
+      <p>Anytime you can check the status and git log.<br><br>
+      <code>$ git status</code><br><br>
+      The status will tell you in which branch are you in and if there's any change to commit.<br>
+      The git log command will display all the commits for your repository in the current branch you are.
+      <br><br>
+      <code>$ git log</code><br><br>
+      You'll see a list of all the commits you've made and a number. The number will be useful to do future checkouts.
+      </p><br>
+
+      <h2 id="checkout">Go back in time</h2>
+      <p>You can check the status of you code in a previous state (a previous commit) with the checkout command.<br><br>
+      <code>$ git chechout 234ebc2345</code><br><br>
+      If you look at your files, the will look like they were in the moments you committed to you repo.<br>
+      if you wan to go back to the last state type:
+      <br><br>
+      <code>$ git checkout master</code><br><br>
+      </p>
+    </div>
   </div>
-
-  <h2 id="installing">Installing Git</h2>
-    <p>To install Git, type in your terminal<br><br>
-    <code>$ sudo apt-get install git</code><br><br>
-    You can check if git is installed typing<br><br>
-    <code>$ git --version</code><br><br>
-    </p>
-  <h2 id="creating">Creating a Repository</h2>
-    <p>If you want to create a repository of a project, place all the files if the project in the same folder. In you console, make this file your working directory. Once you are in that directory type:<br><br>
-    <code>$ git init</code><br><br>
-    You'll see a message saying that a repository was created in your folder
-    </p>
-
-  <h2 id="linking">Linking you local repository to GitHub</h2>
-    <p>if you want to link your local repository to a remote repo, first you have to create your remote repository in GitHub. Then you can type in your terminal<br><br>
-    <code>$ git remote add origin http://github.com/username/repository_name</code><br><br>
-    </p>
-
-  <h2 id="add">Adding files to the staging area</h2>
-    <p>If you want to Git to keep track of a file, you need to add it to the staging area. To accomplish that, type:<br><br>
-    <code>$ git add filename</code><br><br>
-    Also you can add all the files in your folder typing<br><br>
-    <code>$ git add .</code><br><br>
-    </p>
-
-  <h2 id="commit">Commit to a repository</h2>
-    <p>A commit is like a snapshop of the files you have in the staging area in a particular moment. In order to commit to your local repository type:<br><br>
-    <code>$ git commit -m "Message"</code><br><br>
-    Remember you have to add the files to the staging area everytime you want to do a commit. There's an option to commit adding all the files to the staging area<br><br>
-    <code>$ git commit -a -m "Message"</code><br><br>
-    </p>
-
-  <h2 id="commit-remote">Commit to a remote repository</h2>
-    <code>$ git push origin master</code><br><br>
-    <p>Your last commit will be added to the remote repository.<br><br>
-    
-    
-    </p>
-
-  <h2 id="status">Status and log</h2>
-    <p>Anytime you can check the status and git log<br><br>
-    <code>$ git status</code><br><br>
-    The status will tell you in which branch are you in and if there's any chango to commit.<br>
-    The git log command will display all the commits for your repository in the current branch you are
-    <br><br>
-    <code>$ git log</code><br><br>
-    You'll see a list of all the commits you've made and a number. The number will be useful to do future checkouts.
-    </p>
-
-  <h2 id="checkout">Go back in time</h2>
-    <p>You can check the status of you code in a previous state (a previous commit) with the checkout command<br><br>
-    <code>$ git chechout 234ebc2345</code><br><br>
-    If you look at your files, the will look like they were in the moments you committed to you repo.<br>
-    if you wan to go back to the last state type
-    <br><br>
-    <code>$ git checkout master</code><br><br>
-    </p>  
-
 </body>
 </html>

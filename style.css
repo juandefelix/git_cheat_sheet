@@ -1,14 +1,19 @@
 body{
-  /*background-color: red;*/
+  background-color: #fff;
+}
+
+div{
+/*  outline: 1px solid;*/
 }
 
 h1{
-  color:#6C6C6C;
+  color:#404040;
   font-family: Georgia, "Times New Roman", serif; 
 }
 
 h2{
   color:#6C6C6C;
+  text-decoration:underline;
   font-family: Georgia, "Times New Roman", serif; 
 }
 
@@ -22,9 +27,17 @@ p{
 a, a:visited{
   color: #252525;
   font-size: 16px;
-
   text-decoration: none;
 }
+
+a:hover{
+  text-decoration: underline;
+}
+
+ul{
+  padding-left: 15px;
+}
+
 
 code{
   background-color: #303030;
@@ -33,13 +46,28 @@ code{
   padding: 3px 6px;
 }
 
-.side-menu{
+.menu{
   /*outline: 1px solid;*/
+  margin-top: 0px;
+  padding: 2px 4px 2px 20px;
+  background-color: #ccc;
+  border-bottom: 1px solid #aaa;
+}
+
+#header h1, #header p{
+  margin-left: 355px;
+}
+
+#side-menu{
+  /*position: fixed;*/
+  /*outline: 1px solid;*/
+  margin-right: 35px;
   border: 1px solid #aaa;
   border-radius: 5px;
   background-color: #eee;
 }
 
-.side-menu ul{
+#side-menu ul{
+
   list-style-type: none;
 }
